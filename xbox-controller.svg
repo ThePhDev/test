@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <defs>
+    <linearGradient id="bodyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3a3a3d"/>
+      <stop offset="100%" stop-color="#1c1c1e"/>
+    </linearGradient>
+    <radialGradient id="stickGradient" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#4a4a4d"/>
+      <stop offset="100%" stop-color="#0d0d0e"/>
+    </radialGradient>
+    <linearGradient id="triggerGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4a4a4d"/>
+      <stop offset="100%" stop-color="#252527"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Triggers (LT / RT) peeking above the body -->
+  <path d="M 150 108 C 150 78, 175 60, 205 58 C 235 56, 250 70, 250 95 L 250 112 Z" fill="url(#triggerGradient)" stroke="#0a0a0a" stroke-width="2"/>
+  <path d="M 650 108 C 650 78, 625 60, 595 58 C 565 56, 550 70, 550 95 L 550 112 Z" fill="url(#triggerGradient)" stroke="#0a0a0a" stroke-width="2"/>
+
+  <!-- Bumpers (LB / RB) -->
+  <rect x="140" y="102" width="130" height="28" rx="12" fill="#2a2a2c" stroke="#0a0a0a" stroke-width="2"/>
+  <rect x="530" y="102" width="130" height="28" rx="12" fill="#2a2a2c" stroke="#0a0a0a" stroke-width="2"/>
+
+  <!-- Main controller body -->
+  <path d="
+    M 280 100
+    C 320 84, 480 84, 520 100
+    C 580 112, 645 140, 685 190
+    C 718 232, 728 292, 715 348
+    C 703 398, 672 438, 622 448
+    C 590 454, 558 438, 538 406
+    C 508 362, 458 348, 400 348
+    C 342 348, 292 362, 262 406
+    C 242 438, 210 454, 178 448
+    C 128 438, 97 398, 85 348
+    C 72 292, 82 232, 115 190
+    C 155 140, 220 112, 280 100
+    Z"
+    fill="url(#bodyGradient)" stroke="#0a0a0a" stroke-width="3"/>
+
+  <!-- subtle top highlight -->
+  <path d="M 300 108 C 350 96, 450 96, 500 108" fill="none" stroke="#5a5a5d" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- View / Menu buttons -->
+  <rect x="330" y="168" width="26" height="18" rx="6" fill="#111113" stroke="#000" stroke-width="1.5"/>
+  <rect x="444" y="168" width="26" height="18" rx="6" fill="#111113" stroke="#000" stroke-width="1.5"/>
+
+  <!-- Xbox guide button -->
+  <circle cx="400" cy="150" r="26" fill="#0e0e0f" stroke="#000" stroke-width="2"/>
+  <circle cx="400" cy="150" r="26" fill="none" stroke="#4CAF50" stroke-width="2" opacity="0.85"/>
+  <path d="M 388 138 L 412 162 M 412 138 L 388 162" stroke="#4CAF50" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Left analog stick -->
+  <circle cx="270" cy="225" r="42" fill="#000" opacity="0.25"/>
+  <circle cx="270" cy="222" r="40" fill="url(#stickGradient)" stroke="#000" stroke-width="2"/>
+  <circle cx="270" cy="222" r="24" fill="none" stroke="#000" stroke-width="2" opacity="0.6"/>
+
+  <!-- D-pad -->
+  <g stroke="#000" stroke-width="2">
+    <path d="
+      M 257 285 L 283 285 L 283 317 L 315 317 L 315 343 L 283 343
+      L 283 375 L 257 375 L 257 343 L 225 343 L 225 317 L 257 317 Z"
+      fill="#141416" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Right analog stick (lower, mirrors D-pad position) -->
+  <circle cx="530" cy="330" r="42" fill="#000" opacity="0.25"/>
+  <circle cx="530" cy="327" r="40" fill="url(#stickGradient)" stroke="#000" stroke-width="2"/>
+  <circle cx="530" cy="327" r="24" fill="none" stroke="#000" stroke-width="2" opacity="0.6"/>
+
+  <!-- ABXY buttons (upper right, mirrors left stick position) -->
+  <g stroke="#000" stroke-width="2">
+    <circle cx="530" cy="188" r="17" fill="#F5C400"/>
+    <text x="530" y="194" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#3a2f00" text-anchor="middle" stroke="none">Y</text>
+
+    <circle cx="568" cy="225" r="17" fill="#E5342B"/>
+    <text x="568" y="231" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#4a0e0a" text-anchor="middle" stroke="none">B</text>
+
+    <circle cx="492" cy="225" r="17" fill="#3A7BD5"/>
+    <text x="492" y="231" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#0a1f3a" text-anchor="middle" stroke="none">X</text>
+
+    <circle cx="530" cy="262" r="17" fill="#5FB85B"/>
+    <text x="530" y="268" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#0f2e0d" text-anchor="middle" stroke="none">A</text>
+  </g>
+</svg>
